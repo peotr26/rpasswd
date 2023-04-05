@@ -4,27 +4,11 @@
 import sys
 import secrets
 
-c_level = {'alphabet': """
-    abcdefghijklm
-    nopqrstuvwxyz
-    ABCDEFGHIJKLM
-    NOPQRSTUVWXYZ
-""",
-    'alphanumerical': """
-    abcdefghijklm
-    nopqrstuvwxyz
-    ABCDEFGHIJKLM
-    NOPQRSTUVWXYZ
-    0123456789
-""",
-    'complete': """
-    abcdefghijklm
-    nopqrstuvwxyz
-    ABCDEFGHIJKLM
-    NOPQRSTUVWXYZ
-    0123456789
-    !#$%&*+?@^
-"""}
+c_level = {
+    'alphabet': "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    'alphanumerical': c_level['alphabet'] + "".join([str(i) for i in range(10)]),
+    'complete': c_level['alphanumerical'] + "!#$%&*+?@^",
+}
 
 
 def passwd(n: int, c: dict) -> str:
