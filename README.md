@@ -36,6 +36,6 @@ Add this to your `bash.rc` or your shell init script:
 ```bash
 # Alias for rpasswd
 alias rpasswd='python /directory/where/the/python/file/is/located/rpasswd.py'
-# Example
+# Example (if you store the file in ~/.local/bin
 alias rpasswd='python ~/.local/bin/rpasswd.py
 ```
