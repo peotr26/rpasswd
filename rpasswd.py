@@ -1,6 +1,5 @@
 '''Program to generate a random password.'''
 
-
 import sys
 import secrets
 
